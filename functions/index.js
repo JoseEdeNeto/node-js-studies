@@ -8,9 +8,8 @@ function mainfunction(anotherfunction, value){
 
 mainfunction(printstuff, 'Hello World');
 
-var printstuff = function(stuff){
-    console.log(stuff);
-}
+var printstuff = stuff => console.log(stuff);
+
 
 mainfunction(printstuff, 'World Hello');
 
