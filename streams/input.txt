@@ -1,0 +1,3 @@
+Não tem nada de importante aqui.
+Só lendo o arquivo.
+Exemplo de leitura de arquivo.
