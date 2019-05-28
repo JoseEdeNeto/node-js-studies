@@ -9,6 +9,10 @@ function home(req, res, data){
         const writeableStream = fs.createWriteStream('output.txt');
         writeableStream.write(info);
         writeableStream.end();
+        const htmlFile = '<!doctype html>  <html>  <body> <form action="/" method="post"> <input type="text" name="fname" />first name<br /> <input type="number" name="age" />age<br /> <input type="text" name="Sname" />last name<br /> <button>Save</button>  </form>  </body> </html>';
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(htmlFile);
+        res.end();
     } else {
         const htmlFile = '<!doctype html>  <html>  <body> <form action="/" method="post"> <input type="text" name="fname" />first name<br /> <input type="number" name="age" />age<br /> <input type="text" name="Sname" />last name<br /> <button>Save</button>  </form>  </body> </html>';
         res.writeHead(200, {'Content-Type': 'text/html'});
